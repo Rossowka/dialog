@@ -4,16 +4,16 @@ import { Dialog } from './components/Dialog';
 
 
 function App() {
-  const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (e) => {
-    setIsActive(e => !e);
+    setIsOpen(e => !e);
   };
 
   return (
     <div>
       <button onClick={handleClick}>DELETE</button>
-      {isActive ? <Dialog /> : console.log(false) }
+      {isOpen ? <Dialog /> : console.log(false) }
     </div>
   );
 }
