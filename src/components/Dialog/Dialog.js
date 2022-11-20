@@ -15,13 +15,11 @@ function Dialog({ onClose }) {
     return (
         <div className='overlay'>
             <div className='dialog'>
-                <button onClick={onClose}>X</button>
-                <h4>Delete content?</h4>
-                <p>This action is irreversible.</p>
-                <div>
-                    <button onClick={abort}>Abort</button>
-                    <button onClick={confirm}>DELETE</button>
-                </div>
+                <button className='close' onClick={onClose}>X</button>
+                <h4 className='text'>Delete content?</h4>
+                <p className='text'>This action is irreversible.</p>
+                <button className='abort' onClick={abort}>Abort</button>
+                <button className='delete' onClick={confirm}>DELETE</button>
             </div>
         </div>
     )

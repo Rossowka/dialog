@@ -7,6 +7,45 @@
 
 .dialog {
     background-color: white;
-    padding: 50px 50px;
+    padding: 25px 50px 50px 50px;
     height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+}
+
+.text {
+    grid-column: 1 / span 2;
+}
+
+h4 {
+    margin: 0;
+    align-self: end;
+}
+
+p {
+    margin-top: 10px;
+    color: coral;
+    font-weight: bold;
+    align-self: start;
+}
+
+button.close {
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: darkgrey;
+    grid-column: 2;
+    justify-self: end;
+}
+
+button.abort {
+    grid-column: 1;
+    background-color: LightGreen;
+}
+
+button.delete {
+    grid-column: 2;
+    text-transform: uppercase;
 }
