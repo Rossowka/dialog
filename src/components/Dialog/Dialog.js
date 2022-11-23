@@ -1,6 +1,8 @@
 import React from 'react';
 import './styles.css';
 
+import { Button } from '../Button';
+
 function Dialog({ onClose }) {
     const abort = () => {
         console.log('aborted');
@@ -15,11 +17,11 @@ function Dialog({ onClose }) {
     return (
         <div className='overlay'>
             <div className='dialog'>
-                <button className='close' onClick={onClose}>X</button>
+                <Button className='close' onClick={onClose}>X</Button>
                 <h4 className='text'>Delete content?</h4>
                 <p className='text'>This action is irreversible.</p>
-                <button className='abort' onClick={abort}>Abort</button>
-                <button className='delete' onClick={confirm}>DELETE</button>
+                <Button className='abort' onClick={abort}>Abort</Button>
+                <Button className='delete' onClick={confirm}>DELETE</Button>
             </div>
         </div>
     )

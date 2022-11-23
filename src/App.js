@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import { Dialog } from './components/Dialog';
-
+import { Button } from './components/Button';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +12,8 @@ function App() {
 
   return (
     <div>
-      <button onClick={handleClick}>DELETE</button>
-      {isOpen ? <Dialog isOpen={isOpen} onClose={handleClick} /> : console.log(false) }
+      <Button onClick={handleClick}>DELETE</Button>
+      {isOpen ? <Dialog isOpen={isOpen} onClose={handleClick} /> : console.log('dialog closed') }
     </div>
   );
 }
