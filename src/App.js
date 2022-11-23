@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Button onClick={handleClick}>DELETE</Button>
-      {isOpen ? <Dialog isOpen={isOpen} onClose={handleClick} /> : console.log('dialog closed') }
+      { isOpen ? <Dialog isOpen={isOpen} onClose={handleClick} /> : false }
     </div>
   );
 }
